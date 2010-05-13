@@ -1,0 +1,7 @@
+Adds static typing to Ruby.
+
+To add a static-typed variable, use:
+ static.variable = 10
+ puts static.variable #Returns 10
+ static.variable = "ten" #Raises error
+ static.another_variable #Raises error
