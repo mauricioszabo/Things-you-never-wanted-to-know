@@ -5,3 +5,16 @@ To add a static-typed variable, use:
  puts static.variable #Returns 10
  static.variable = "ten" #Raises error
  static.another_variable #Raises error
+
+You can, too, add type-signature functions to your Ruby code, like this:
+ class Foo
+   signature String, Fixnum
+   def a_function(name, age)
+     puts "Name: #{name} and age: #{age}"
+   end
+ end
+
+ Foo.new.a_function('Me', 10) #Prints "Name: Me and age: 10"
+ Foo.new.a_function(10, "Me") #Raises error.
+
+Good luck!
