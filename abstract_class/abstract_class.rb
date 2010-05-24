@@ -6,11 +6,6 @@ class AbstractClass
   def a_metodo
     puts "foo"
   end
-
-  private
-  def algo_dois
-    
-  end
 end
 
 puts
