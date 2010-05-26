@@ -1,7 +1,7 @@
 require 'abstract'
 
 class AbstractClass
-  include Abstract
+  extend Abstract
 
   def a_metodo
     puts "foo"

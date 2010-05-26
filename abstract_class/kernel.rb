@@ -1,6 +1,6 @@
-class Module
-  def trace_class_creation(inside_class = 1, &block)
-    classes_count = inside_class
+module Kernel
+  def trace_class_creation(&block)
+    classes_count = 0
     procedure = proc do |event, file, line, id, binding, classname|
       classes_count += 1 if event == 'class'
       classes_count -= 1 if event == 'end'
