@@ -1,0 +1,21 @@
+Trying to create java-like private methods. For example:
+
+require 'private_methods'
+class Example
+  include PrivateMethods
+  public_method :say do
+    puts word
+  end
+
+  private_method :word do
+    'Hello, world!'
+  end
+end
+
+class Child < Example
+  private_method :word do
+    'Hello, from Child'
+  end
+end
+
+Child.new.say #Puts on screen "Hello, word!"
